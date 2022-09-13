@@ -26,11 +26,42 @@ postalcode = 33333
 
 
 function findIndex (index: number,arr: number[]): number {
+
     return arr[index]
 }
 
+function log(msg: any): void { 
+    //inserts into the database
+    console.log(msg)
+}
+
 let finalNumber: number = findIndex(1,NumberOfStudents)
-console.log(finalNumber + 1)
+// log(finalNumber + 1)
+// log("yep. it's not going to return something")
+
+const complexObject : any = {name: "damian", height: "yes please", age: 49}
+
+interface Human {
+    name: string
+    height: string
+}
+
+interface Teacher extends Human {
+    age: number
+    weight?: string
+}
+
+
+const complexObject2 : Teacher = {name: "damian", height: "yes please", age: 49 }
+
+function displayteacher(teacher: Teacher): string {
+    return `this teacher is ${teacher.age} old`
+
+}
+
+console.log(displayteacher(complexObject2))
+
+
 
 
 // console.log("You're how old: ",age)
